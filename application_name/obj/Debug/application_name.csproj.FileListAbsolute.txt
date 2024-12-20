@@ -8,3 +8,8 @@ D:\Code\c#\application_sol\application_name\obj\Debug\application_name.csproj.Ge
 D:\Code\c#\application_sol\application_name\obj\Debug\application_name.csproj.CoreCompileInputs.cache
 D:\Code\c#\application_sol\application_name\obj\Debug\application_name.exe
 D:\Code\c#\application_sol\application_name\obj\Debug\application_name.pdb
+D:\Code\c#\application_sol\application_name\bin\Debug\OxyPlot.dll
+D:\Code\c#\application_sol\application_name\bin\Debug\OxyPlot.WindowsForms.dll
+D:\Code\c#\application_sol\application_name\bin\Debug\OxyPlot.xml
+D:\Code\c#\application_sol\application_name\bin\Debug\OxyPlot.WindowsForms.xml
+D:\Code\c#\application_sol\application_name\obj\Debug\applicat.5352BEA5.Up2Date
