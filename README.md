@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Sharp Interest Calculator** is a robust and user-friendly application designed to calculate interest quickly and accurately. This project is a mere recreation of the other interest calculator I have but in C# in hopes of learning it. It supports a range of interest calculation methods suitable for financial and educational purposes.
+The **Sharp Interest Calculator** is a robust and user-friendly application designed to calculate interest quickly and accurately. This project is a mere recreation of the other interest calculator I have, but in C# ( trying to learn it ). It supports a range of interest calculation methods suitable for financial and educational purposes.
 
 ## Features
 
