@@ -1,0 +1,10 @@
+D:\Code\c#\application_sol\application_name\bin\Debug\application_name.exe.config
+D:\Code\c#\application_sol\application_name\bin\Debug\application_name.exe
+D:\Code\c#\application_sol\application_name\bin\Debug\application_name.pdb
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.csproj.AssemblyReference.cache
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.Form1.resources
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.Properties.Resources.resources
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.csproj.GenerateResource.cache
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.csproj.CoreCompileInputs.cache
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.exe
+D:\Code\c#\application_sol\application_name\obj\Debug\application_name.pdb
