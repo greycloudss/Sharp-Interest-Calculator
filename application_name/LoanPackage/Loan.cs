@@ -4,20 +4,18 @@
     {
         private int months;
         private double amount;
+        private double total, interest;
         private double[] payments;
 
-        protected Loan() {
-            payments = new double[0];
-            amount = 0;
-            months = 0;
-        }
-
-        protected Loan(int months, double amount) {
+        protected Loan(double interest, int months, double amount) {
             this.months = months;
             this.amount = amount;
+            this.interest = interest;
             payments = new double[months];  
         }
 
+
+        public abstract double getTotalInterest();
         public abstract int getMonths(); 
         public abstract double getAmount();
         public abstract double[] getPayments();
