@@ -8,7 +8,7 @@ using OxyPlot;
 using OxyPlot.Series;
 using _plotView = OxyPlot.WindowsForms.PlotView;
 using _table = System.Windows.Forms.DataGridView;
-
+using _comboBox = System.Windows.Forms.ComboBox;
 
 namespace application_name
 {
@@ -25,6 +25,9 @@ namespace application_name
         private _label labelName;
         private _plotView plotView = new _plotView();
         private _table dataGridView;
+        private _label initialPayment, overallInterest, fullPayment;
+        private _comboBox ComboBox = new _comboBox();
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -37,14 +40,20 @@ namespace application_name
         #region Windows Form Designer generated code
 
         private void InitializeComponent() {
-            this.calc = new _button();
             this.panel0 = new _panel();
             this.panel1 = new _panel();
             this.panel2 = new _panel();
             this.panel3 = new _panel();
+
+            this.calc = new _button();
             this.enterMonths = new _textField();
             this.enterAmount = new _textField();
             this.labelName = new _label();
+            this.ComboBox = new _comboBox();
+
+            this.initialPayment = new _label();
+            this.overallInterest = new _label();
+            this.fullPayment = new _label();
             this.SuspendLayout();
 
             this.panel0.Location = new System.Drawing.Point(12, 92);
@@ -79,13 +88,21 @@ namespace application_name
             this.labelName.Size = new System.Drawing.Size(224, 66);
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
 
-            this.plotView.Location = new System.Drawing.Point(248, 568);
-            this.plotView.Size = new System.Drawing.Size(300, 300);
+            this.plotView.Location = new System.Drawing.Point(0, 200);
             this.plotView.PerformLayout();
-            this.plotView.Location = new System.Drawing.Point(10, 10);
-            this.plotView.Size = new System.Drawing.Size(panel3.Width - 5, panel3.Height - 10);
+            this.plotView.Size = new System.Drawing.Size(panel3.Width - 5, panel3.Height - 200);
             this.plotView.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
             this.plotView.Model = CreatePlotModel();
+
+            this.initialPayment.Location = new System.Drawing.Point((int)Width / 2, 24);
+            this.initialPayment.Name = "initPayment";
+            this.initialPayment.Text = "Initial payment: ";
+
+            this.overallInterest.Location = new System.Drawing.Point((int)Width / 2, 36);
+            this.overallInterest.Name = "overallInterest";
+            this.overallInterest.Text = "Overall interest: ";
+
+            this.fullPayment.Location = new System.Drawing.Point((int)Width / 2, 12);
 
             this.InitializeTable();
 
@@ -112,10 +129,19 @@ namespace application_name
             this.enterAmount.Margin = new Padding(10);
             this.enterAmount.Location = new System.Drawing.Point(12, 122);
 
+            this.ComboBox.Name = "Loan Type";
+            this.ComboBox.Size = new System.Drawing.Size(200, 100);
+            this.ComboBox.TabIndex = 5;
+            this.ComboBox.Location = new System.Drawing.Point(12, 202);
+            this.ComboBox.Items.AddRange(new object[] { "Anuential", "Linear", "Exponential" });
+            this.ComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.ComboBox.SelectedIndex = 0;
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(144, 135, 161);
             this.ClientSize = new System.Drawing.Size(900, 600);
+
 
             controllInit();
 
@@ -161,7 +187,7 @@ namespace application_name
             model.Series.Add(series);
             return model;
         }
-
+          
         private void InitializeTable() {
             dataGridView = new DataGridView {
                 Dock = DockStyle.Fill,
@@ -192,7 +218,7 @@ namespace application_name
 
 
             for (int i = 0; i < 24; i++)
-                dataGridView.Rows.Add("", "", "", "");
+                dataGridView.Rows.Add(" ", " ", " ", " ");
             
 
             this.panel2.Controls.Add(dataGridView);
@@ -201,7 +227,7 @@ namespace application_name
         void controllInit() {
             this.Controls.AddRange(new Control[] { this.panel0, this.panel1, this.panel2, this.panel3});
             this.Controls.AddRange(new Control[] { enterAmount, enterMonths, panel0, calc });
-            this.panel0.Controls.AddRange(new Control[] { enterAmount, enterMonths, calc});
+            this.panel0.Controls.AddRange(new Control[] { enterAmount, enterMonths, calc, ComboBox});
             this.panel1.Controls.Add(this.labelName);
             this.panel2.Controls.Add(this.dataGridView);
             this.panel3.Controls.AddRange(new Control[] { plotView });

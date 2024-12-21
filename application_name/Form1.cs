@@ -13,8 +13,7 @@ namespace application_name
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
+        public Form1() {
             this.Size = new System.Drawing.Size(900, 600);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.AutoSize = false;
@@ -25,8 +24,6 @@ namespace application_name
         void onCalculate(object sender, EventArgs e) {
             
         }
-
-
 
     }
 }
